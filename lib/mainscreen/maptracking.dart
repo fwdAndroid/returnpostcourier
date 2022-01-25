@@ -51,7 +51,7 @@ class _MapTrackingState extends State<MapTracking> {
                   children: [
                     Image.asset(
                       'assets/track.png',
-                      height: 450,
+                      height: 370,
                     ),
                   ],
                 ),

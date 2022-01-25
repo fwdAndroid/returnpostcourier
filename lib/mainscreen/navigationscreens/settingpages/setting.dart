@@ -28,8 +28,8 @@ class _SettingState extends State<Setting> {
                     },
                     child: Image.asset(
                       'assets/back.png',
-                      height: 60,
-                      width: 80,
+                      height: 40,
+                      width: 40,
                     )),
               ),
               Container(
@@ -47,6 +47,7 @@ class _SettingState extends State<Setting> {
               ),
               Center(
                 child: Container(
+                  margin: EdgeInsets.symmetric(horizontal: 30),
                   height: 60,
                   width: 340,
                   //  padding: const EdgeInsets.all(3.0),
@@ -83,7 +84,7 @@ class _SettingState extends State<Setting> {
               ),
                 Center(
                 child: Container(
-                  margin: EdgeInsets.only(top: 20),
+                  margin: EdgeInsets.only(top: 20,left: 20,right: 20),
                   height: 60,
                   width: 340,
                   //  padding: const EdgeInsets.all(3.0),
@@ -120,7 +121,7 @@ class _SettingState extends State<Setting> {
               ),
               Center(
                 child: Container(
-                  margin: EdgeInsets.only(top: 20),
+                  margin: EdgeInsets.only(top: 20,left: 20,right: 20),
                   height: 60,
                   width: 340,
                   //  padding: const EdgeInsets.all(3.0),

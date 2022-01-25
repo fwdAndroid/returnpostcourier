@@ -19,70 +19,72 @@ class _MainScreenState extends State<MainScreen> {
         key: scalfoldKey,
         drawer: MyDrawer(),
         backgroundColor: Color(0xff404040),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  InkWell(
-                    onTap: () {
-                      scalfoldKey.currentState!.openDrawer();
-                    },
-                    child: Image.asset(
-                      'assets/menu.png',
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        scalfoldKey.currentState!.openDrawer();
+                      },
+                      child: Image.asset(
+                        'assets/menu.png',
+                        fit: BoxFit.cover,
+                        width: 90,
+                        height: 70,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      child: Image.asset(
+                        'assets/search.png',
+                        width: 90,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Image.asset(
+                'assets/map.png',
+                height: 440,
+                width: MediaQuery.of(context).size.width,
+                fit: BoxFit.cover,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    InkWell(
+                        child: Image.asset(
+                      'assets/mapone.png',
+                      fit: BoxFit.fitWidth,
+                      width: 50,
+                      height: 50,
+                    )),
+                    InkWell(
+                        child: Image.asset(
+                      'assets/maptwo.png',
                       fit: BoxFit.cover,
-                      width: 90,
-                      height: 70,
+                      width: 80,
+                      height: 80,
+                    )),
+                    InkWell(
+                      onTap: () => showFirsttModal(context),
+                      child: Image.asset('assets/mapthree.png',
+                          fit: BoxFit.cover, width: 80, height: 80),
                     ),
-                  ),
-                  InkWell(
-                    onTap: () {},
-                    child: Image.asset(
-                      'assets/search.png',
-                      width: 90,
-                    ),
-                  )
-                ],
-              ),
-            ),
-            Image.asset(
-              'assets/map.png',
-              height: 440,
-              width: MediaQuery.of(context).size.width,
-              fit: BoxFit.cover,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  InkWell(
-                      child: Image.asset(
-                    'assets/mapone.png',
-                    fit: BoxFit.fitWidth,
-                    width: 80,
-                    height: 80,
-                  )),
-                  InkWell(
-                      child: Image.asset(
-                    'assets/maptwo.png',
-                    fit: BoxFit.cover,
-                    width: 80,
-                    height: 80,
-                  )),
-                  InkWell(
-                    onTap: () => showFirsttModal(context),
-                    child: Image.asset('assets/mapthree.png',
-                        fit: BoxFit.cover, width: 80, height: 80),
-                  ),
-                ],
-              ),
-            )
-          ],
+                  ],
+                ),
+              )
+            ],
+          ),
         ));
   }
 
@@ -91,253 +93,257 @@ class _MainScreenState extends State<MainScreen> {
       backgroundColor: Colors.transparent,
       context: context,
       builder: (BuildContext context) {
-        return ClipRRect(
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(24), topRight: Radius.circular(24)),
-          child: Container(
-            color: Color(0xff404040),
-            height: 400,
-            child: Center(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  ListTile(
-                    leading: Image.asset('assets/cap.png'),
-                    title: Text(
-                      'Clothing',
-                      style: GoogleFonts.getFont('Montserrat',
-                          fontWeight: FontWeight.w700,
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontStyle: FontStyle.normal),
-                    ),
-                    subtitle: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'from BooHoo',
-                          style: GoogleFonts.getFont(
-                            'Montserrat',
-                            fontWeight: FontWeight.w700,
-                            color: Color(0xffEB5757),
-                            fontSize: 10,
-                            fontStyle: FontStyle.normal,
-                          ),
-                          textAlign: TextAlign.start,
+        return ListView(
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(24), topRight: Radius.circular(24)),
+              child: Container(
+                color: Color(0xff404040),
+                height: 400,
+                child: Center(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      ListTile(
+                        leading: Image.asset('assets/cap.png'),
+                        title: Text(
+                          'Clothing',
+                          style: GoogleFonts.getFont('Montserrat',
+                              fontWeight: FontWeight.w700,
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontStyle: FontStyle.normal),
                         ),
-                        Text(
-                          'Stewart Menzies',
+                        subtitle: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'from BooHoo',
+                              style: GoogleFonts.getFont(
+                                'Montserrat',
+                                fontWeight: FontWeight.w700,
+                                color: Color(0xffEB5757),
+                                fontSize: 10,
+                                fontStyle: FontStyle.normal,
+                              ),
+                              textAlign: TextAlign.start,
+                            ),
+                            Text(
+                              'Stewart Menzies',
+                              style: GoogleFonts.getFont(
+                                'Montserrat',
+                                fontWeight: FontWeight.w700,
+                                color: Color(0xff8D8989),
+                                fontSize: 10,
+                                fontStyle: FontStyle.normal,
+                              ),
+                              textAlign: TextAlign.start,
+                            ),
+                          ],
+                        ),
+                      ),
+                      ListTile(
+                        leading: Padding(
+                          padding: const EdgeInsets.only(top: 10.0),
+                          child: Image.asset(
+                            'assets/pin.png',
+                            height: 30,
+                            width: 30,
+                          ),
+                        ),
+                        title: Text(
+                          'Carrier',
                           style: GoogleFonts.getFont(
                             'Montserrat',
-                            fontWeight: FontWeight.w700,
+                            fontWeight: FontWeight.w500,
                             color: Color(0xff8D8989),
-                            fontSize: 10,
+                            fontSize: 14,
                             fontStyle: FontStyle.normal,
                           ),
                           textAlign: TextAlign.start,
                         ),
-                      ],
-                    ),
-                  ),
-                  ListTile(
-                    leading: Padding(
-                      padding: const EdgeInsets.only(top: 10.0),
-                      child: Image.asset(
-                        'assets/pin.png',
+                        subtitle: Text(
+                          'Post Office',
+                          style: GoogleFonts.getFont(
+                            'Montserrat',
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontStyle: FontStyle.normal,
+                          ),
+                          textAlign: TextAlign.start,
+                        ),
+                      ),
+                      Divider(
                         height: 30,
-                        width: 30,
+                        thickness: 0.5,
+                        indent: 27,
+                        endIndent: 27,
+                        color: Colors.grey,
                       ),
-                    ),
-                    title: Text(
-                      'Carrier',
-                      style: GoogleFonts.getFont(
-                        'Montserrat',
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xff8D8989),
-                        fontSize: 14,
-                        fontStyle: FontStyle.normal,
-                      ),
-                      textAlign: TextAlign.start,
-                    ),
-                    subtitle: Text(
-                      'Post Office',
-                      style: GoogleFonts.getFont(
-                        'Montserrat',
-                        fontWeight: FontWeight.w700,
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontStyle: FontStyle.normal,
-                      ),
-                      textAlign: TextAlign.start,
-                    ),
-                  ),
-                  Divider(
-                    height: 30,
-                    thickness: 0.5,
-                    indent: 27,
-                    endIndent: 27,
-                    color: Colors.grey,
-                  ),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'What the Job is',
-                          style: GoogleFonts.getFont(
-                            'Montserrat',
-                            fontWeight: FontWeight.w500,
-                            color: Color(0xff8D8989),
-                            fontSize: 14,
-                            fontStyle: FontStyle.normal,
-                          ),
-                          textAlign: TextAlign.start,
-                        ),
-                        Text(
-                          'Collection',
-                          style: GoogleFonts.getFont(
-                            'Montserrat',
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white,
-                            fontSize: 14,
-                            fontStyle: FontStyle.normal,
-                          ),
-                          textAlign: TextAlign.start,
-                        )
-                      ],
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Distance',
-                          style: GoogleFonts.getFont(
-                            'Montserrat',
-                            fontWeight: FontWeight.w500,
-                            color: Color(0xff8D8989),
-                            fontSize: 14,
-                            fontStyle: FontStyle.normal,
-                          ),
-                          textAlign: TextAlign.start,
-                        ),
-                        Text(
-                          '0.5mi',
-                          style: GoogleFonts.getFont(
-                            'Montserrat',
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white,
-                            fontSize: 14,
-                            fontStyle: FontStyle.normal,
-                          ),
-                          textAlign: TextAlign.start,
-                        )
-                      ],
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Tracking Number',
-                          style: GoogleFonts.getFont(
-                            'Montserrat',
-                            fontWeight: FontWeight.w500,
-                            color: Color(0xff8D8989),
-                            fontSize: 14,
-                            fontStyle: FontStyle.normal,
-                          ),
-                          textAlign: TextAlign.start,
-                        ),
-                        Text(
-                          'PIA12124556',
-                          style: GoogleFonts.getFont(
-                            'Montserrat',
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white,
-                            fontSize: 14,
-                            fontStyle: FontStyle.normal,
-                          ),
-                          textAlign: TextAlign.start,
-                        )
-                      ],
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 30),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Earning',
-                          style: GoogleFonts.getFont(
-                            'Montserrat',
-                            fontWeight: FontWeight.w500,
-                            color: Color(0xff8D8989),
-                            fontSize: 14,
-                            fontStyle: FontStyle.normal,
-                          ),
-                          textAlign: TextAlign.start,
-                        ),
-                        RichText(
-                          text: TextSpan(
-                            children: const <TextSpan>[
-                              TextSpan(
-                                  text: '£',
-                                  style: TextStyle(
-                                      color: Color(0xffEB5757),
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w600)),
-                              TextSpan(
-                                  text: ' 1.50',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w700)),
-                            ],
-                          ),
-                        )
-                        // Text(
-                        //   '5E',
-                        //   style: TextStyle(
-                        //       fontSize: 14,
-                        //       fontWeight: FontWeight.w600,
-                        //       color: Colors.white),
-                        // )
-                      ],
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(top: 20, right: 20),
-                    child: Center(
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: Color(0xffEB5757),
-                          minimumSize: Size(310, 60),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(23)),
-                        ),
-                        onPressed: () {
-                          showNavigationModal(context);
-                        },
-                        child: Text(
-                          'Accept Job',
-                          style: TextStyle(fontSize: 20),
+                      Container(
+                        margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'What the Job is',
+                              style: GoogleFonts.getFont(
+                                'Montserrat',
+                                fontWeight: FontWeight.w500,
+                                color: Color(0xff8D8989),
+                                fontSize: 14,
+                                fontStyle: FontStyle.normal,
+                              ),
+                              textAlign: TextAlign.start,
+                            ),
+                            Text(
+                              'Collection',
+                              style: GoogleFonts.getFont(
+                                'Montserrat',
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontStyle: FontStyle.normal,
+                              ),
+                              textAlign: TextAlign.start,
+                            )
+                          ],
                         ),
                       ),
-                    ),
+                      Container(
+                        margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Distance',
+                              style: GoogleFonts.getFont(
+                                'Montserrat',
+                                fontWeight: FontWeight.w500,
+                                color: Color(0xff8D8989),
+                                fontSize: 14,
+                                fontStyle: FontStyle.normal,
+                              ),
+                              textAlign: TextAlign.start,
+                            ),
+                            Text(
+                              '0.5mi',
+                              style: GoogleFonts.getFont(
+                                'Montserrat',
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontStyle: FontStyle.normal,
+                              ),
+                              textAlign: TextAlign.start,
+                            )
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Tracking Number',
+                              style: GoogleFonts.getFont(
+                                'Montserrat',
+                                fontWeight: FontWeight.w500,
+                                color: Color(0xff8D8989),
+                                fontSize: 14,
+                                fontStyle: FontStyle.normal,
+                              ),
+                              textAlign: TextAlign.start,
+                            ),
+                            Text(
+                              'PIA12124556',
+                              style: GoogleFonts.getFont(
+                                'Montserrat',
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontStyle: FontStyle.normal,
+                              ),
+                              textAlign: TextAlign.start,
+                            )
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.symmetric(horizontal: 30),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Earning',
+                              style: GoogleFonts.getFont(
+                                'Montserrat',
+                                fontWeight: FontWeight.w500,
+                                color: Color(0xff8D8989),
+                                fontSize: 14,
+                                fontStyle: FontStyle.normal,
+                              ),
+                              textAlign: TextAlign.start,
+                            ),
+                            RichText(
+                              text: TextSpan(
+                                children: const <TextSpan>[
+                                  TextSpan(
+                                      text: '£',
+                                      style: TextStyle(
+                                          color: Color(0xffEB5757),
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w600)),
+                                  TextSpan(
+                                      text: ' 1.50',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w700)),
+                                ],
+                              ),
+                            )
+                            // Text(
+                            //   '5E',
+                            //   style: TextStyle(
+                            //       fontSize: 14,
+                            //       fontWeight: FontWeight.w600,
+                            //       color: Colors.white),
+                            // )
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top: 20, right: 20),
+                        child: Center(
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Color(0xffEB5757),
+                              minimumSize: Size(310, 60),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(23)),
+                            ),
+                            onPressed: () {
+                              showNavigationModal(context);
+                            },
+                            child: Text(
+                              'Accept Job',
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                ],
+                ),
               ),
             ),
-          ),
+          ],
         );
       },
     );

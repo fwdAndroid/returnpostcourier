@@ -73,7 +73,7 @@ class _SupportState extends State<Support> {
                             style: GoogleFonts.getFont('Montserrat',fontWeight: FontWeight.w600, color: Colors.white,fontSize: 24,fontStyle: FontStyle.normal),),
                       ),
                        Container(
-                        margin: EdgeInsets.only(top: 40),
+                        margin: EdgeInsets.only(top: 40,left: 20,right:20),
                         height: 60,
                         width: 350,
                         //  padding: const EdgeInsets.all(3.0),
@@ -100,7 +100,7 @@ class _SupportState extends State<Support> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 20),
+                        margin: EdgeInsets.only(top: 20,left: 20,right:20),
                         height: 60,
                         width: 350,
                         //  padding: const EdgeInsets.all(3.0),
@@ -127,7 +127,7 @@ class _SupportState extends State<Support> {
                         ),
                       ),
                         Container(
-                        margin: EdgeInsets.only(top: 20),
+                        margin: EdgeInsets.only(top: 20,left: 20,right:20),
                         height: 60,
                         width: 350,
                         //  padding: const EdgeInsets.all(3.0),
@@ -155,7 +155,7 @@ class _SupportState extends State<Support> {
                       ),
 
                         Container(
-                        margin: EdgeInsets.only(top: 20),
+                        margin: EdgeInsets.only(top: 20,left: 20,right:20),
                         height: 60,
                         width: 350,
                         //  padding: const EdgeInsets.all(3.0),

@@ -114,7 +114,7 @@ class _EditAccountState extends State<EditAccount> {
                     ),
                     Center(
                       child: Container(
-                        margin: EdgeInsets.symmetric(vertical: 15),
+                        margin: EdgeInsets.symmetric(vertical: 15,horizontal: 20),
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             primary: Color(0xffEB5757),
