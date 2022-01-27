@@ -259,13 +259,13 @@ class _FullOrderDetailState extends State<FullOrderDetail> {
                       //  textAlign: TextAlign.start,
                       decoration: InputDecoration(
                         
-                        labelText: '02355',
-                        contentPadding: EdgeInsets.only(top: 30, left: 20),
+                        hintText: '02355',
+                        contentPadding: EdgeInsets.only(top: 10, left: 20),
                         border: InputBorder.none,
                      
                         
                         labelStyle:  GoogleFonts.getFont('Montserrat',fontWeight: FontWeight.w600, color: Colors.white,fontSize: 12,fontStyle: FontStyle.normal),
-                        hintStyle:  GoogleFonts.getFont('Montserrat',fontWeight: FontWeight.w600, color: Color(0xff8D8989),fontSize: 12,fontStyle: FontStyle.normal),
+                        hintStyle:  GoogleFonts.getFont('Montserrat',fontWeight: FontWeight.w600, color: Colors.white,fontSize: 12,fontStyle: FontStyle.normal),
                       ),
                     )),
           Container(

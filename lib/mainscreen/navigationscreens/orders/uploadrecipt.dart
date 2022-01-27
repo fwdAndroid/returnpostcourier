@@ -324,7 +324,7 @@ class _UploadReciptState extends State<UploadRecipt> {
               ],
             ),
              Container(
-                       margin: EdgeInsets.only(top: 30),
+                       margin: EdgeInsets.only(top: 30,bottom: 30),
                        child: Center(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(

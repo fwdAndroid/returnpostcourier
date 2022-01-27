@@ -56,7 +56,7 @@ class _PaymentState extends State<Payment> {
             ),
           ),
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 30),
+            margin: EdgeInsets.symmetric(horizontal: 20),
             width: MediaQuery.of(context).size.width,
             height: 165,
             child: Card(
@@ -82,7 +82,7 @@ class _PaymentState extends State<Payment> {
                           )),
                       Spacer(),
                       Container(
-                        margin: EdgeInsets.only(right: 10),
+                        margin: EdgeInsets.only(right: 10,top: 24),
                         child: RichText(
                           text: TextSpan(
                             children: const <TextSpan>[
@@ -157,31 +157,34 @@ class _PaymentState extends State<Payment> {
                   fontStyle: FontStyle.normal),
             ),
           ),
-          Center(
-            child: Container(
-              margin: EdgeInsets.symmetric(vertical: 15,horizontal: 20),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Color(0xffEB5757),
-                  fixedSize: Size(300, 56),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(23)),
-                ),
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => AddAccount()));
-                },
-                child: Text(
-                  'Add To Accounts',
-                  style: GoogleFonts.getFont('Montserrat',
-                  fontWeight: FontWeight.w600,
-                  color: Colors.white,
-                  fontSize: 14,
-                  fontStyle: FontStyle.normal),
-                ),
-              ),
-            ),
-          ),
+     Container(
+       margin: EdgeInsets.only(top: 5),
+       child: Center(
+         child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Color(0xffEB5757),
+                        fixedSize: Size(MediaQuery.of(context).size.width/1.15, 60),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(24)),
+                      ),
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => AddAccount()));
+                      },
+                      child: Text(
+                        'Add To Accounts',
+                        style: GoogleFonts.getFont('Montserrat',
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontStyle: FontStyle.normal),
+                      ),
+                    
+                  ),
+       ),
+     ),
+       
+          
         ],
       ),
     );

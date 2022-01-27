@@ -68,7 +68,7 @@ class _OrdersHistoryState extends State<OrdersHistory> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 30, right: 20),
+                        margin: EdgeInsets.only(top: 30),
                         child: Center(
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
@@ -104,7 +104,7 @@ class _OrdersHistoryState extends State<OrdersHistory> {
                       ),
                       SingleChildScrollView(
                         child: Container(
-                          margin: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                          margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
                           width: MediaQuery.of(context).size.width,
                           height: 300,
                           child: InkWell(
@@ -142,7 +142,7 @@ class _OrdersHistoryState extends State<OrdersHistory> {
                                                   )),
                                               Spacer(),
                                               Container(
-                                                margin: EdgeInsets.only(right: 20),
+                                                margin: EdgeInsets.only(right: 20,top: 20),
                                                 child: RichText(
                                                   text: TextSpan(
                                                     children: const <TextSpan>[
@@ -213,7 +213,7 @@ class _OrdersHistoryState extends State<OrdersHistory> {
                       ),
                       SingleChildScrollView(
                         child: Container(
-                          margin: EdgeInsets.symmetric(horizontal: 20),
+                          margin: EdgeInsets.symmetric(horizontal: 10),
                           width: MediaQuery.of(context).size.width,
                           height:   300,
                           child: InkWell(
@@ -251,7 +251,7 @@ class _OrdersHistoryState extends State<OrdersHistory> {
                                                   )),
                                               Spacer(),
                                               Container(
-                                                margin: EdgeInsets.only(right: 20),
+                                                margin: EdgeInsets.only(right: 20,top: 20),
                                                 child: RichText(
                                                   text: TextSpan(
                                                     children: const <TextSpan>[

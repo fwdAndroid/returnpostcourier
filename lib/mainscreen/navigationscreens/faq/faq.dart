@@ -62,18 +62,17 @@ class _SupportState extends State<Support> {
                       )),  
                ),
                Expanded(
-                 child: Container(
-                   margin: EdgeInsets.symmetric(vertical: 20),
-                   child: Column(
+                child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                   Container(
-                        margin: EdgeInsets.only(top: 10,),
+                   Container(width: 101,
+                        margin: EdgeInsets.only(top: 25,left:23),
                         child: Text('Support',
-                            style: GoogleFonts.getFont('Montserrat',fontWeight: FontWeight.w600, color: Colors.white,fontSize: 24,fontStyle: FontStyle.normal),),
+                            style: GoogleFonts.getFont('Montserrat',fontWeight: FontWeight.w600, color: Colors.white,fontSize: 24,fontStyle: FontStyle.normal,height: 1,),),
                       ),
                        Container(
-                        margin: EdgeInsets.only(top: 40,left: 20,right:20),
+                        margin: EdgeInsets.only(top:25,left: 23,right:23),
+                           padding: EdgeInsets.only(left: 10),
                         height: 60,
                         width: 350,
                         //  padding: const EdgeInsets.all(3.0),
@@ -87,7 +86,7 @@ class _SupportState extends State<Support> {
                           onTap: (){
                             Navigator.push(context, MaterialPageRoute(builder: (builder) => FAQ()));
                           },
-                          contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                          contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 15),
                           shape: CircleBorder(),
                           leading: Text(
                             'FAQ’s',
@@ -100,7 +99,8 @@ class _SupportState extends State<Support> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 20,left: 20,right:20),
+                          margin: EdgeInsets.only(top:20,left: 23,right:23),
+                             padding: EdgeInsets.only(left: 10),
                         height: 60,
                         width: 350,
                         //  padding: const EdgeInsets.all(3.0),
@@ -127,7 +127,8 @@ class _SupportState extends State<Support> {
                         ),
                       ),
                         Container(
-                        margin: EdgeInsets.only(top: 20,left: 20,right:20),
+                             padding: EdgeInsets.only(left: 10),
+                          margin: EdgeInsets.only(top:20,left: 23,right:23),
                         height: 60,
                         width: 350,
                         //  padding: const EdgeInsets.all(3.0),
@@ -155,7 +156,8 @@ class _SupportState extends State<Support> {
                       ),
 
                         Container(
-                        margin: EdgeInsets.only(top: 20,left: 20,right:20),
+                          margin: EdgeInsets.only(top:20,left: 23,right:23),
+                             padding: EdgeInsets.only(left: 10),
                         height: 60,
                         width: 350,
                         //  padding: const EdgeInsets.all(3.0),
@@ -183,10 +185,10 @@ class _SupportState extends State<Support> {
                       ),
             ],),
                  ),
-               ),
+               
              Container(
             
-             margin: EdgeInsets.only(bottom: 20),
+              margin: EdgeInsets.only(bottom:20,left: 23,right:23),
              child: Center(
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(

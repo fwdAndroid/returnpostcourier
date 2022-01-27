@@ -33,8 +33,8 @@ class _LanguageSelectionState extends State<LanguageSelection> {
         children: [
            Container(
             width: 237,
-            height: 88,
-            margin: EdgeInsets.only(top: 25,left: 30),
+          
+            margin: EdgeInsets.only(top: 15,left: 30),
             child: Text(
               'Language',
               style: TextStyle(
@@ -44,10 +44,10 @@ class _LanguageSelectionState extends State<LanguageSelection> {
             ),
           ),
           Container(
-             margin: EdgeInsets.only(left: 30,right: 30,bottom: 20),
+             margin: EdgeInsets.only(left: 30,right: 30,bottom: 20,top: 19),
              decoration: BoxDecoration(
               color: Color(0xffEB5757),
-              borderRadius: new BorderRadius.circular(25),
+              borderRadius: new BorderRadius.circular(20),
             ),
             child: RadioListTile<SingingCharacter>(
               controlAffinity: ListTileControlAffinity.trailing,
@@ -66,7 +66,7 @@ class _LanguageSelectionState extends State<LanguageSelection> {
             margin: EdgeInsets.only(left: 30,right: 30),
            decoration: BoxDecoration(
               color: Color(0xff535353),
-                borderRadius: new BorderRadius.circular(25),
+                borderRadius: new BorderRadius.circular(20),
             ),
           child: RadioListTile<SingingCharacter>(
               controlAffinity: ListTileControlAffinity.trailing,
@@ -84,7 +84,7 @@ class _LanguageSelectionState extends State<LanguageSelection> {
              margin: EdgeInsets.only(left: 30,right: 30,top: 20),
              decoration: BoxDecoration(
               color:Color(0xff535353),
-              borderRadius: new BorderRadius.circular(25),
+              borderRadius: new BorderRadius.circular(20),
             ),
             child: RadioListTile<SingingCharacter>(
               controlAffinity: ListTileControlAffinity.trailing,
@@ -103,7 +103,7 @@ class _LanguageSelectionState extends State<LanguageSelection> {
             margin: EdgeInsets.only(left: 30,right: 30,top: 20),
            decoration: BoxDecoration(
               color: Color(0xff535353),
-                borderRadius: new BorderRadius.circular(25),
+                borderRadius: new BorderRadius.circular(20),
             ),
           child: RadioListTile<SingingCharacter>(
               controlAffinity: ListTileControlAffinity.trailing,
