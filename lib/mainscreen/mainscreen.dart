@@ -177,13 +177,9 @@ class _MainScreenState extends State<MainScreen> {
                           textAlign: TextAlign.start,
                         ),
                       ),
-                      Divider(
-                        height: 30,
-                        thickness: 0.5,
-                        indent: 27,
-                        endIndent: 27,
-                        color: Colors.grey,
-                      ),
+                     Container(
+                       margin: EdgeInsets.symmetric(horizontal: 20),
+                       child: Image.asset('assets/divider.png',width: 310,)),
                       Container(
                         margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                         child: Row(
@@ -472,13 +468,9 @@ class _MainScreenState extends State<MainScreen> {
                           textAlign: TextAlign.start,
                         ),
                       ),
-                      Divider(
-                        height: 30,
-                        thickness: 0.5,
-                        indent: 27,
-                        endIndent: 27,
-                        color: Colors.grey,
-                      ),
+                      Container(
+                       margin: EdgeInsets.symmetric(horizontal: 20),
+                       child: Image.asset('assets/divider.png',width: 310,)),
                       Container(
                         margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                         child: Row(

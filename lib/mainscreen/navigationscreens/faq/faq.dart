@@ -66,7 +66,7 @@ class _SupportState extends State<Support> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                    Container(width: 101,
-                        margin: EdgeInsets.only(top: 25,left:23),
+                        margin: EdgeInsets.only(top: 25,left:25),
                         child: Text('Support',
                             style: GoogleFonts.getFont('Montserrat',fontWeight: FontWeight.w600, color: Colors.white,fontSize: 24,fontStyle: FontStyle.normal,height: 1,),),
                       ),

@@ -22,15 +22,15 @@ class _SettingState extends State<Setting> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                margin: EdgeInsets.only(left: 10, top: 10, bottom: 20),
+                margin: EdgeInsets.only(left: 20, top: 10, bottom: 20),
                 child: InkWell(
                     onTap: () {
                       Navigator.pop(context);
                     },
                     child: Image.asset(
                       'assets/back.png',
-                      height: 40,
-                      width: 40,
+                      height: 50,
+                      width: 50,
                     )),
               ),
             Container(width: 200,
@@ -95,9 +95,9 @@ class _SettingState extends State<Setting> {
                           ),
                         ),
             Container(
-                 margin: EdgeInsets.only(top:20,left: 23,right:23),
+                 margin: EdgeInsets.only(top:20,left: 20,right:20),
                              padding: EdgeInsets.only(left: 10),
-                  width: 310,
+                  width: MediaQuery.of(context).size.width,
                   //  padding: const EdgeInsets.all(3.0),
                   decoration: BoxDecoration(
                     color: Color(0xff535353),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:returnpostuser/mainscreen/navigationscreens/faq/faqsupport.dart';
 import 'package:returnpostuser/mainscreen/navigationscreens/faq/frequently.dart';
 
 class FAQ extends StatefulWidget {
@@ -14,38 +15,39 @@ class _FAQState extends State<FAQ> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          backgroundColor: Colors.transparent,
-          leading:     Padding(
-            padding: const EdgeInsets.only(left: 8.0),
+      
+         backgroundColor: Color(0xff404040),
+         body: ListView(
+   
+
+
+           
+           
+           children: [
+             Column(
+               crossAxisAlignment: CrossAxisAlignment.start,
+               children: [
+                 Container(
+      margin: EdgeInsets.only(left: 14,),
+            padding: const EdgeInsets.all(8.0),
             child: InkWell(
                     onTap: () {
                       Navigator.pop(context);
                     },
                     child: Image.asset('assets/back.png',height: 50,width: 50,)),
           ),
-               
-               
-        ),
-         backgroundColor: Color(0xff404040),
-         body: ListView(
-
-
-
-           
-           
-           children: [
-            
+               ],
+             ),
+             Container(width: 101,
+                          margin: EdgeInsets.only(top: 15,left:25),
+                          child: Text('FAQ’s',
+                              style: GoogleFonts.getFont('Montserrat',fontWeight: FontWeight.w600, color: Colors.white,fontSize: 24,fontStyle: FontStyle.normal,height: 1,),),
+                        ),
               SingleChildScrollView(
                 child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                     Container(width: 101,
-                          margin: EdgeInsets.only(top: 25,left:23),
-                          child: Text('FAQ’s',
-                              style: GoogleFonts.getFont('Montserrat',fontWeight: FontWeight.w600, color: Colors.white,fontSize: 24,fontStyle: FontStyle.normal,height: 1,),),
-                        ),
+                    
                          Container(
                           margin: EdgeInsets.only(top:25,left: 23,right:23),
                              padding: EdgeInsets.only(left: 10),
@@ -60,7 +62,7 @@ class _FAQState extends State<FAQ> {
 
                           child: ListTile(
                             onTap: (){
-                         //     Navigator.push(context, MaterialPageRoute(builder: (builder) => FAQ()));
+                              Navigator.push(context, MaterialPageRoute(builder: (builder) => FAQSupport()));
                             },
                             contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 15),
                             shape: CircleBorder(),
