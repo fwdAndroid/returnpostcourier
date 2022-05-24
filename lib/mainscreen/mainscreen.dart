@@ -14,7 +14,9 @@ class _MainScreenState extends State<MainScreen> {
   var scalfoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return 
+    
+    Scaffold(
       key: scalfoldKey,
       drawer: MyDrawer(),
       backgroundColor: Color(0xff404040),
